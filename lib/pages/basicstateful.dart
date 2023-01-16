@@ -41,6 +41,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   decrement();
                 },
                 child: Icon(Icons.remove)),
+            SizedBox(
+              height: 10,
+            ),
+            container(),
           ],
         ),
       ),
@@ -57,5 +61,29 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     setState(() {
       value -= 1;
     });
+  }
+
+  Widget container() {
+    return InkWell(
+      onTap: () {
+        setState(() {
+          value += 2;
+        });
+      },
+      child: Container(
+        alignment: Alignment.center,
+        margin: EdgeInsets.symmetric(horizontal: 25),
+        height: 50,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.red.withOpacity(.5),
+          borderRadius: BorderRadius.circular(25),
+        ),
+        child: Text(
+          "Value Double",
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+        ),
+      ),
+    );
   }
 }
