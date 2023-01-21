@@ -4,6 +4,7 @@ import 'package:flutter_application_1/pages/day3.dart';
 import 'package:flutter_application_1/pages/day6state.dart';
 import 'package:flutter_application_1/pages/home_page.dart';
 import 'package:flutter_application_1/pages/loginpagesample.dart';
+import 'package:flutter_application_1/pages/routes_ongenerate.dart';
 import 'package:flutter_application_1/pages/signup_page.dart';
 import 'package:flutter_application_1/pages/stack.dart';
 import 'package:flutter_application_1/pages/tiktok_ui_stackExample.dart';
@@ -21,12 +22,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.purple),
       themeMode: ThemeMode.light,
       darkTheme: ThemeData(primarySwatch: Colors.green),
-      initialRoute: "/day6",
+      initialRoute: "/on",
       routes: {
         "/": (context) => HomePage(),
         "/login": (context) => LoginPageSample(),
         "/signUpPage": (context) => SignUpPage(),
         "/day6": (context) => Day6State(),
+        "/on": (context) => On(),
       },
       debugShowCheckedModeBanner: false,
       title: "Flutter Days",
